@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./formscript.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <h1>Formulario Información Alta Telefónica</h1>
+    <form action="=./procesarFormulario.php" name="telefonica">
+        <fieldset class="fieldsetbox"> 
+            <legend>Datos Personales</legend>
+            <div class="input">
+                <label for="Nombre">
+                    Nombre:
+                </label>
+                <input id="Nombre" type="text" name="Nombre" maxlength="30"> 
+            </div>
+
+            <div class="input">
+                <label for="Apellidos">
+                    Apellidos: 
+                </label>
+                <input type="text" name="Apellidos" maxlength="60"> 
+            </div>
+            
+            <div class="input">
+                <label for="Direccion">
+                    Dirección: 
+                </label>
+                <input type="text" name="Dirección" maxlength="60">
+            </div>
+
+           <div class="input">
+               <label for="Codigo postal">
+                   Código Postal: 
+               </label>
+               <input type="text" name="Código Postal" pattern="[0-9]{5}"> 
+           </div>
+
+            <div class="input">
+                <label for="Localidad">
+                    Localidad: 
+                </label>
+                <input type="text" name="Localidad">
+            </div>
+
+        </fieldset>
+        
+        <fieldset class="fieldsetbox">
+            <legend>Tipo de Contratación</legend>
+            <div class="contratacion">
+                <div>
+                    <input type="radio" name="tipoc" value="nuevacontratacion" checked="checked" />Nueva Contratación 
+                </div>
+                <div>
+                    <input type="radio" name="tipoc" value="portabilidad" />Portabilidad 
+                </div>
+                <div>
+                    <input type="radio" name="tipoc" value="cambio de contrato" />Cambio de Contrato  
+                </div>
+                
+            </div>
+            <div class="compania">
+                Elija la compañía actual:
+                <select name="compañia">
+                    <option value="movistar">Movistar</option>
+                    <option value="orange">Orange</option>
+                    <option value="vodafone">Vodafone</option>
+                    <option value="yoigo">Yoigo</option>
+                    <option value="nocompañia">No tengo ninguna compañía</option>
+                </select>  
+                
+                En caso de portabilidad, elija la nueva compañía: 
+                <select name="nuevac">
+                    <option value="movistar">Movistar</option>
+                    <option value="orange">Orange</option>
+                    <option value="vodafone">Vodafone</option>
+                    <option value="yoigo">Yoigo</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset class="fieldsetbox">
+            <legend>Datos bancarios</legend>
+            País: <input id="pais" type="text" value="ES" readonly="readonly" /> (sólo válido ES)
+            Control IBAN: <input id="iban" type="number" placeholder="XX" pattern="([0-9]{2})"> (dos dígitos)
+            Entidad: <input id="entidad" type="number" placeholder="XXXX" pattern="([0-9]{4})"> (cuatro dígitos)   
+            Sucursal: <input id="sucursal" type="number" placeholder="XXXX" pattern="([0-9]{4})"> (cuatro dígitos) 
+            DC: <input id="dc" type="number" placeholder="XX" pattern="([0-9]{2})"> (dos dígitos)
+            Cuenta: <input id="cuenta" type="number" placeholder="XXXXXXXXXX" pattern="([0-9]{10})"> (diez dígitos)
+        </fieldset>
+
+        <fieldset class="fieldsetbox">
+            <legend class="fildsetlegend">Datos estadísticos - ¿Cómo nos conoció?</legend>
+            <div> 
+                <input type="checkbox" class="checkbox" id="tv" name="tv" /> <label for="tv">A través de la TV</label>
+                <input type="checkbox" id="radio" name="radio" /> <label for="otros"> A través de la radio</label>
+                <input type="checkbox" id="internet" name="internet" /> <label for="internet"> A través de la Internet</label>
+                <input type="checkbox" id="otros" name="otros" /> <label for="otros"> Otros</label>
+            </div>
+            <input id="valoracion" type="range" min="1" max="5" /> Valoracion [1-5]
+
+            Fecha de la Encuesta: <input id="fecha" type="date" value="2019-01-01" />
+        </fieldset>
+        <div class="submitButtons">
+            <input class="sendData" type="submit" value="Enviar Datos">&nbsp
+            <input class="sendData" type="reset" value="Borrar Datos">
+        </div>
+        <div class="actionButtons">
+            <input type="button" class="showActionButton" value="Mostrar Valoración" onclick="mostrarValoracion()" />
+            <input type="button" class="showActionButton" value="Mostrar Cuenta" onclick="mostrarCuenta()" />
+            <input type="button" class="showActionButton" value="Mostrar Dia Semana" onclick="mostrarDiaDeLaSemana()" />
+        </div>
+    </form>
+</body>
+</html>
+
+

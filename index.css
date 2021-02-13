@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+p a{
+    display: inline;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+
+
+form, input, textarea, label, button, fieldset
+{
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    display: block;
+    background: transparent;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif
+}
+
+h1 {
+    color: blue;
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.fieldsetbox {
+    background-color: aqua;
+    margin: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.fieldsetbox input {
+    background-color: yellow
+}
+
+.fieldsetbox legend {
+    background-color: red;
+    color: white;  
+    padding: 0.1em 0 0 0;  
+}
+
+.input {
+    display: flex;
+    margin: 2px;
+}
+
+.contratacion {
+    display: flex;
+}
+.contratacion div {
+    display: flex;
+    margin: 0 30px 20px 0;
+}
+
+.contratacion div input {
+    margin: 0 2px 4px 0px;
+}
+
+
+
+.submitButtons {
+    margin-bottom: 10px;
+}
+
+input[type=submit],input[type=reset].sendData {
+    background-color: powderblue;
+    padding: 0.5em;
+    min-height: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+input[type=button].showActionButton {
+    background-color: plum;
+    padding: 1em;
+    min-height: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
