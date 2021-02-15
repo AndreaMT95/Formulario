@@ -10,42 +10,42 @@
 </head>
 <body>
     <h1>Formulario Información Alta Telefónica</h1>
-    <form action="=./procesarFormulario.php" name="telefonica">
+    <form method="POST" action="./procesarFormulario.php">
         <fieldset class="fieldsetbox"> 
             <legend>Datos Personales</legend>
             <div class="input">
                 <label for="Nombre">
                     Nombre:
                 </label>
-                <input id="Nombre" type="text" name="Nombre" maxlength="30"> 
+                <input id="Nombre" type="text" name="Nombre" maxlength="30" required> 
             </div>
 
             <div class="input">
                 <label for="Apellidos">
                     Apellidos: 
                 </label>
-                <input type="text" name="Apellidos" maxlength="60"> 
+                <input type="text" name="Apellidos" maxlength="60"required> 
             </div>
             
             <div class="input">
                 <label for="Direccion">
                     Dirección: 
                 </label>
-                <input type="text" name="Dirección" maxlength="60">
+                <input type="text" name="Dirección" maxlength="60"required>
             </div>
 
            <div class="input">
                <label for="Codigo postal">
                    Código Postal: 
                </label>
-               <input type="text" name="Código Postal" pattern="[0-9]{5}"> 
+               <input type="text" name="Código Postal" pattern="[0-9]{5}" required> 
            </div>
 
             <div class="input">
                 <label for="Localidad">
                     Localidad: 
                 </label>
-                <input type="text" name="Localidad">
+                <input type="text" name="Localidad"required>
             </div>
 
         </fieldset>
@@ -54,13 +54,13 @@
             <legend>Tipo de Contratación</legend>
             <div class="contratacion">
                 <div>
-                    <input type="radio" name="tipoc" value="nuevacontratacion" checked="checked" />Nueva Contratación 
+                    <input type="radio" name="tipoc" value="nuevacontratacion" checked="checked" required />Nueva Contratación 
                 </div>
                 <div>
-                    <input type="radio" name="tipoc" value="portabilidad" />Portabilidad 
+                    <input type="radio" name="tipoc" value="portabilidad" required />Portabilidad 
                 </div>
                 <div>
-                    <input type="radio" name="tipoc" value="cambio de contrato" />Cambio de Contrato  
+                    <input type="radio" name="tipoc" value="cambio de contrato" required/>Cambio de Contrato  
                 </div>
                 
             </div>
@@ -75,7 +75,7 @@
                 </select>  
                 
                 En caso de portabilidad, elija la nueva compañía: 
-                <select name="nuevac">
+                <select name="nuevac" required>
                     <option value="movistar">Movistar</option>
                     <option value="orange">Orange</option>
                     <option value="vodafone">Vodafone</option>
